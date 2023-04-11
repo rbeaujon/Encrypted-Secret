@@ -1,7 +1,5 @@
 # Encrypted-Secret
 
-"Encrypted Secret" is a Google Chrome extension that provides secure storage for users' secrets.
-
 "Encrypted Secret" is a Google Chrome extension that provides secure storage for users' secrets. 
 Upon installation, the extension needs to be initialized by the user.
 The user will be prompted to enter a secret, which will be encrypted with a password of at least 4 characters and saved locally.
