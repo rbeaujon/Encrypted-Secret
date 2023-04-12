@@ -65,7 +65,7 @@ const Popup = () => {
           {!isOpen && (
             <div className="secret__noOpen"> 
               <p>Your secret is:</p>
-              <div>{secret}</div>
+              <div className="secret__noOpen--token">{secret}</div>
               <button onClick={() => setIsOpen(true)}>Next</button>
             </div>
           )}

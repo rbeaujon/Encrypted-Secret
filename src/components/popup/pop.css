@@ -4,20 +4,27 @@
   top: 40%;
   transform: translate(-50%,-50%);
   width: 100vw;
+  
 }
 .secret__noOpen p {
   font-weight: 600;
   font-size: 20px;
   text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
 }
-.secret__noOpen div {
+.secret__noOpen--token {
   font-size: 18px;
   font-weight: 500;
+  max-width: 600px;
   border: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   text-align: center;
   color: rgb(22, 162, 184);
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
 }
 .secret__noOpen button {
   margin-top: 20px;
@@ -25,6 +32,10 @@
   border-radius: 5px;
   padding: 5px 20px;
   width: 100px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  margin-top: 40px;
 }
 .secret__noOpen button:hover {
   background-color: rgb(192, 194, 194);
