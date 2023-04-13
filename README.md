@@ -25,6 +25,4 @@ Developed with ReactJS and CSS.
 <img src="/assets/images/secret.png" width="40%">
 <img src="/assets/images/modal.png" width="40%">
 
-## Out-of-scope
-  
-* Error messages are not available now, working on this feature.
+
