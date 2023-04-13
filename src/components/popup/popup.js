@@ -10,7 +10,8 @@ const Popup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isVerificationMode, setIsVerificationMode] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);  
+  const [modalOpen, setModalOpen] = useState(false); 
+  const [message, setMessage] = useState({});
 
   useEffect(() => {
     const storedSecret = localStorage.getItem("secret");
@@ -44,6 +45,11 @@ const Popup = () => {
       setSecret(decryptedSecret);
       setIsLoggedIn(true);
       setIsVerificationMode(false);
+    }else {
+      setMessage({error: "Password is not valid"});
+      setTimeout(() => {
+         setMessage({})
+      },5000)
     }
   };
 
@@ -119,17 +125,23 @@ const Popup = () => {
         </div>
       )}
       {initialized && isVerificationMode && (
-        <div className="verifyPassword">
+        <>
+         <span className={`${message.error && "error"}`}>{message.error}</span>
+      
+        <div className="verifyPassword"> 
+  
           <input
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          />
+          /> 
           <button onClick={handleVerifyPassword}>
             Verify Password
           </button>
+         
         </div>
+        </>
       )}
       <div className={`modal${modalOpen ? '--open' : ''}`}>
         <div className="modal__data">
